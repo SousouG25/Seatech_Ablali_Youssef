@@ -31,7 +31,11 @@ LED_BLEUE = 1;
 LED_ORANGE = 1;
 
 InitPWM();
-PWMSetSpeed(20);
+
+
+//PWMSetSpeed(20,MOTEUR_GAUCHE);
+//PWMSetSpeed(20,MOTEUR_DROIT);
+
 
 /****************************************************************************************************/
 // Boucle Principale
