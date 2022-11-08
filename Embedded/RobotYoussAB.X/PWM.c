@@ -7,7 +7,7 @@
 
 #define PWMPER 40.0
 
-float acceleration = 1.0;
+float acceleration = 5;
 
 void InitPWM(void) {
     PTCON2bits.PCLKDIV = 0b000; //Divide by 1
@@ -114,9 +114,9 @@ void PWMUpdateSpeed() {
 
 void PWMSetSpeedConsigne(float vitesseEnPourcents, char numeroMoteur) {
     if (numeroMoteur == MOTEUR_GAUCHE) {
-        robotState.vitesseGaucheCommandeCourante = vitesseEnPourcents;
+        robotState.vitesseGaucheConsigne = vitesseEnPourcents;
 
     } else if (numeroMoteur == MOTEUR_DROIT) {
-        robotState.vitesseDroiteCommandeCourante = vitesseEnPourcents;
+        robotState.vitesseDroiteConsigne = vitesseEnPourcents;
     }
 }
